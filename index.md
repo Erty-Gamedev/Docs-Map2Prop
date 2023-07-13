@@ -1,32 +1,60 @@
 ---
 title: Home
 layout: home
+nav_order: 1
 ---
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+# GoldSrc Map2Prop
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+## Introduction
 
-More specifically, the created site:
+GoldSrc Map2Prop is a tool for converting .rmf and .jmf files, as well as .obj files exported from the Steam version of J.A.C.K, to goldsrc .smd file that can then be compiled into a goldsrc format studio model without the hastle of using an 3D editor.
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+## Installation
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+No installation required, simply get the latest executable from [Releases](releases) and place it in your folder of choice.
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+## How To Use (Hammer/J.A.C.K .rmf/.jmf)
 
-To get started with creating a site, just click "[use this template]"!
+* Create your object(s) in a new project or copy object(s) from an existing project to a new, empty project as save as .rmf/.jmf file.
+* To make use of smooth shading, either enable it in `config.ini`, or put the `_smooth{x}` suffix on the filename (this will override the config.ini settings for this file). `{x}` is an optional parameter for the angle threshold in degrees for when smooth shading will be applied (e.g. `_smooth60` will smooth all angles less than 60°).
+* Place any .wad packages used in creating your object(s) in the project file directory to make use of the automatic texture extraction. Alternatively you can specify a wad list in `config.ini`, and/or specify game/mod directories for the application to search in (it will prioritize wad list first, game/mod directory second, project file directory last).
+* Drag the .rmf/.jmf file onto the Map2Prop.exe executable. A .smd file and a .qc file will be created in the project file's directory. If autocompile is set to yes in `config.ini` (it is by default) and a valid [Sven Co-op studiomdl.exe](http://www.the303.org/backups/sven_studiomdl_2019.rar) is found, then the application will automatically compile the .qc for you.
 
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
+## How To Use (J.A.C.K .obj)
 
-----
+* Create your object in J.A.C.K and go to *File* -> *Export to OBJ...* (note: this will export the *entire* map as an .obj file so make sure the object is by itself in its own file, e.g. by copy-pasting it into a new map).
+* To make use of smooth shading, either enable it in `config.ini`, or put the `_smooth{x}` suffix on the filename (this will override the config.ini settings for this file). `{x}` is an optional parameter for the angle threshold in degrees for when smooth shading will be applied (e.g. `_smooth60` will smooth all angles less than 60°).
+* Place any .wad packages used for making the .obj in its directory to make use of the automatic texture extraction. Alternatively you can specify a wad list in `config.ini`, and/or specify game/mod directories for the application to search in (it will prioritize wad list first, game/mod directory second, project file directory last).
+* Drag the exported .obj file onto the Map2Prop.exe executable. A .smd file and a .qc file will be created in the .obj file's directory. If autocompile is set to yes in `config.ini` (it is by default) and a valid [Sven Co-op studiomdl.exe](http://www.the303.org/backups/sven_studiomdl_2019.rar) is found, then the application will automatically compile the .qc for you.
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+## Reporting Problems/Bugs
 
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+Please notify Erty (erty.gamedev@gmail.com) along with the project file (either .rmf/.jmf, or .obj and its associated .mtl file) that was used as well as the logs/ folder produced by the executable.
+
+## Features
+
+* Automatic triangulation of all >3-gons.
+* Skipping of faces covered in NULL texture, as well as several other tool textures.
+* Faces covered in {-prefixed textures will automatically be given the masked (transparent) rendermode.
+* The project file directory will be checked for existence of any referenced textures, and if missing will attempt to find and extract it from .wad packages in the wad list and game/mod directory specified in `config.ini` and project file directory, and if failed it will notify the user of missing textures.
+* Smooth shading that can be enabled with or without angle threshold using filename suffix parameter (`_smooth{x}`) or in `config.ini`.
+* CLI interface (run `Map2Prop.exe --help` to see a list of arguments).
+
+## Why is the Sven Co-op studiomdl.exe required for compilation?
+
+The reason for requiring the Sven Co-op studiomdl.exe for compiling these models is because of how map textures work, i.e. they may tile or otherwise extend beyond the UV bounds. Legacy studiomdl.exe compilers will clamp UV coordinates which is no good for this. Don't worry, the compiled model will still work perfectly fine in vanilla Half-Life.
+
+## Future
+
+Currently planning on using an option to split up an input file into several models based on, for example, VISGroup or tied entity. Leaning towards the latter as the .jmf format's ability to nest VISGroup might make it complicated.
+
+## Special Thanks
+
+Thanks to Captain P for showing me the .rmf/.jmf parsing code from MESS!
+
+### Alpha Testers
+Many thanks goes out to the kind people who helped me test this program and provide useful feedback and suggestions during its alpha stage:
+* SV BOY
+* TheMadCarrot
+* Descen
