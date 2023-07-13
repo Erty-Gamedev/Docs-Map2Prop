@@ -8,9 +8,7 @@ nav_order: 2
 
 ---
 
-## GoldSrc Map2Prop v0.8.0 Neonymous
-Beta
-{: .label .inline}
+## GoldSrc Map2Prop v0.8.0 Neonymous <span class="label label-blue">Beta</span>
 
 ### Changelog:
 
