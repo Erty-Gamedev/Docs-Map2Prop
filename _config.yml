@@ -1,5 +1,8 @@
 title: GoldSrc Map2Prop Docs
 description: Documentation for Map2Prop
 theme: just-the-docs
+color_scheme: dark
 
 url: https://erty-gamedev.github.io/Docs-Map2Prop/
+favicon_ico: "/assets/images/favicon.ico"
+search_enabled: false
