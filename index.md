@@ -22,7 +22,7 @@ You may also use the CLI interface. Run `Map2Prop.exe --help` to list all availa
 
 The application will produce a .smd file as well as generate a .qc file already filled out for as a basic static prop.
 
-#### Note: Model origin
+### Note: Model origin
 
 The model will use the project file's origin as its own origin. Typically it's preferred to have the origin at the center bottom of the model to make it more convenient to place the model in-editor. This can also be adjusted with the `--offset` command line option.
 
@@ -53,7 +53,7 @@ Either copy your object to a new, empty file or select the object in J.A.C.K and
 
 ## Reporting Problems/Bugs
 
-Please notify Erty (erty.gamedev@gmail.com) along with the project file (either .rmf/.jmf, or .obj and its associated .mtl file) that was used as well as the logs/ folder produced by the executable.
+Please notify Erty ([erty.gamedev@gmail.com](mailto:erty.gamedev@gmail.com)) along with the project file (either .rmf/.jmf, or .obj and its associated .mtl file) that was used as well as the logs/ folder produced by the executable.
 
 ## Features
 
