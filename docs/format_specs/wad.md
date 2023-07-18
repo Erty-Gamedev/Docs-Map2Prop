@@ -51,6 +51,7 @@ typedef struct {
 The file entries archived in the WAD3's directory are described using an array of DirEntry structures.
 
 ## File types
+
 The WAD3 format can store up to 256 different entry types, but only three are actually supported in GoldSrc:
 * [qpic (0x42)](#qpic-image): A simple image of any size.
 * miptex (0x43): World texture with dimensions that are multiple-of-16 and 4 mipmaps. This is the typical entry type.
@@ -121,7 +122,6 @@ typedef struct {
     char[colors_used][3] palette;
 } Font;
 ```
-
 
 # Sources
 - [The hlbsp Project](https://hlbsp.sourceforge.net/index.php?content=waddef)

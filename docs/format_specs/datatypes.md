@@ -28,5 +28,6 @@ For example, a string of 16 bytes might be represented by `char[16]`.
 | nt_char[n]   | n                  | null-terminated string   |
 
 ## Notes
+
 [^1]: Pascal strings are length-prefixed with a single byte, and thus the string length is limited to 255 bytes.
 [^2]: Pascal string length-prefixed with a 4-byte int.
