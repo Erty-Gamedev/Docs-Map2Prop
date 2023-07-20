@@ -28,7 +28,7 @@ typedef struct {
     float version;                      // File format version (typically 2.2)
     char[3] magic;                      // File format magic number
     int visgroup_count;                 // Number of VisGroups
-    VisGroup[visgroup_count] visgroups; // VisGroups in the map
+    VisGroup[visgroup_count] visgroups; // VisGroups objects
     p_char[] cmapworld;                 // The string "CMapWorld" in ascii
     char[7] unkown1;
     int object_count;                   // Number of objects
