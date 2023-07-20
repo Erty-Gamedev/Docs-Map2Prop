@@ -5,12 +5,24 @@ nav_order: 1
 ---
 
 # GoldSrc Map2Prop
+{: .no_toc }
 
 ## Introduction
+{: .no_toc }
 
 GoldSrc Map2Prop is a tool for converting .rmf and .jmf files, as well as .obj files exported from the Steam version of J.A.C.K, to goldsrc .smd file that can then be compiled into a goldsrc format studio model without the hastle of using an 3D editor.
+<br><br>
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 ### Supported platforms
+
 Currently only supported on Windows.<br>
 Linux support is planned for a future release.
 
