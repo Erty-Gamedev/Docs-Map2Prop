@@ -28,7 +28,7 @@ typedef struct {
     char[4] magic;                      // File format magic number
     char[4] unknown;                    // I'm unsure what this is. In all tests it came up as 0x79000000
     int ep_count;                       // Number of recent export paths
-    pint_char[ep_count] export_paths;   // Recent export paths
+    p_char[ep_count] export_paths;      // Recent export paths
     int group_count;                    // Number of groups in the map
     Group[group_count] groups;          // Group objects
     int visgroup_count;                 // Number of VisGroups
@@ -50,6 +50,15 @@ All world brushes are stored within the worldspawn entity. The `entities` array 
 
 # Common Structures
 
+## Length-prefixed string
+
+```c
+typedef struct {
+    int length;             // The length of the string
+    char[length] string;    // The ascii-encoded string
+} p_char;
+```
+
 ## Color
 
 ```c
@@ -70,8 +79,8 @@ typedef struct {
 
 ```c
 typedef struct {
-    pint_char[] key;    // Key of the property
-    pint_char[] value;  // Value of the property
+    p_char key;    // Key of the property
+    p_char value;  // Value of the property
 } KeyValue;
 ```
 
@@ -91,7 +100,7 @@ typedef struct {
 
 ```c
 typedef struct {
-    pint_char[] name;   // VisGroup name
+    p_char name;        // VisGroup name
     int visgroup_id;    // VisGroup's ID number
     Color color;        // Editor color of the VisGroup
     _Bool visible;      // Whether the VisGroup is visible or not
@@ -115,8 +124,8 @@ Paths are placed using the Path tool in J.A.C.K and offer an alternative to plac
 
 ```c
 typedef struct {
-    pint_char[] classname;      // Typically path_corner or path_track
-    pint_char[] path_name;      // The base name for this path
+    p_char classname;           // Typically path_corner or path_track
+    p_char path_name;           // The base name for this path
     int path_type;              // The direction of the path
     int unknown;
     Color color;                // Editor color of the Path
@@ -137,8 +146,8 @@ The path's direction or `path_type` can have one of three different values:<br>
 
 ```c
 typedef struct {
-    pint_char[] name_override;      // Name to use instead of auto-generated one
-    pint_char[] fire_on_pass;       // Trigger this target when this node has been reached
+    p_char name_override;           // Name to use instead of auto-generated one
+    p_char fire_on_pass;            // Trigger this target when this node has been reached
     Vector position;                // The node's position in world coordinates
     Vector angles;                  // The node's angles
     int flags;                      // Editor flags
@@ -151,13 +160,13 @@ typedef struct {
 
 ```c
 typedef struct {
-    p_char[] classname;                 // The entity's classname
+    p_char classname;                   // The entity's classname
     Vector origin;                      // The origin if it's a point entity
     int flags;                          // Editor flags
     int group_id;                       // ID of the group this entity belongs to
     int root_group_id;                  // The top-most group this entity is nested within
     Color color;                        // Editor color of the Path
-    pint_char[13] special_keys;         // The names of various special attributes used by J.A.C.K
+    p_char[13] special_keys;            // The names of various special attributes used by J.A.C.K
     int sp_spawnflags;
     Vector sp_angles;
     int sp_rendering;
