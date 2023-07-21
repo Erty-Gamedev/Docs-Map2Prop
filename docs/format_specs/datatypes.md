@@ -23,11 +23,10 @@ For example, a string of 16 bytes might be represented by `char[16]`.
 | float        | 4                  | float                    |
 | _Bool        | 1                  | boolean                  |
 | char[n]      | n                  | string                   |
-| p_char[]     | variable (max 256) | pascal string [^1]       |
-| pint_char[]  | variable           | pascal string (int) [^2] |
+| p_char[]     | variable (max 257) | pascal string [^1]       |
 | nt_char[n]   | n                  | null-terminated string   |
 
 ## Notes
 
-[^1]: Pascal strings are length-prefixed with a single byte, and thus the string length is limited to 255 bytes.
+[^1]: Pascal strings are length-prefixed with a single byte, and thus the string length is limited to 256 bytes.
 [^2]: Pascal string length-prefixed with a 4-byte int.

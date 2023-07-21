@@ -29,11 +29,11 @@ typedef struct {
     char[3] magic;                      // File format magic number
     int visgroup_count;                 // Number of VisGroups
     VisGroup[visgroup_count] visgroups; // VisGroups objects
-    p_char[] cmapworld;                 // The string "CMapWorld" in ascii
+    p_char cmapworld;                   // The string "CMapWorld" in ascii
     char[7] unkown1;
     int object_count;                   // Number of objects
     MapObject[object_count] objects;    // Map objects (Brush, Entity, Group)
-    p_char[] worldspawn;                // The string "worldspawn" in ascii
+    p_char worldspawn;                  // The string "worldspawn" in ascii
     char[4] unknown2;
     int spawnflags;                     // Worldspawn spawnflags (not used)
     int kv_count;                       // Number of worldspawn's key-value pairs
@@ -53,19 +53,36 @@ The magic number is 3 bytes represented by the string `RMF` in ascii.
 
 # Common Structures
 
+## Length-prefixed string
+
+```c
+typedef struct {
+    u_char length;          // The length of the string (max 256)
+    char[length] string;    // The ascii-encoded string
+} p_char;
+```
+
 ## Color
 
 ```c
 typedef struct {
-    char[3] color;      // One byte each for red, green and blue channel
+    char[3] rgb;        // One byte each for red, green and blue channel
 } Color;
+```
+
+```c
+typedef struct {
+    char[4] rgba;       // One byte each for red, green, blue and alpha channel
+} RgbaColor;
 ```
 
 ## Vector
 
 ```c
 typedef struct {
-    float[3] vector;    // One float each for x, y and z component
+    float x;
+    float y;
+    float z;
 } Vector;
 ```
 
@@ -73,8 +90,8 @@ typedef struct {
 
 ```c
 typedef struct {
-    p_char[] key;       // Key of the property
-    p_char[] value;     // Value of the property
+    p_char key;       // Key of the property
+    p_char value;     // Value of the property
 } KeyValue;
 ```
 
@@ -83,11 +100,10 @@ typedef struct {
 ```c
 typedef struct {
     nt_char[128] name;      // VisGroup name
-    Color color;            // Editor color of the VisGroup
-    char unknown1;
+    RgbaColor color;        // Editor color of the VisGroup
     int visgroup_id;        // VisGroup's ID number
     _Bool visible;          // Whether the VisGroup is visible or not
-    char[3] unknown2;
+    char[3] unknown;
 } VisGroup;
 ```
 
@@ -99,7 +115,7 @@ All map objects starts with a length-prefixed string specifying its type.
 
 ```c
 typedef struct {
-    p_char[] object_type;   // "CMapSolid" in the case of a brush object
+    p_char object_type;     // "CMapSolid" in the case of a brush object
     int visgroup_id;        // ID of the VisGroup the object belongs to
     Color color;            // Editor color of the object
     char[4] unknown1;
@@ -136,12 +152,12 @@ be rotated. You will mostly only use this to *undo* the rotation done to the tex
 
 ```c
 typedef struct {
-    p_char[] object_type;           // "CMapEntity" in the case of an entity object
+    p_char object_type;             // "CMapEntity" in the case of an entity object
     int visgroup_id;                // ID of the VisGroup the object belongs to
     Color color;                    // Editor color of the object
     int brush_count;                // Number of brushes tied to the entity
     Brush[brush_count] brushes;     // Brushes that are tied to the entity
-    p_char[] classname;             // The entity's classname
+    p_char classname;               // The entity's classname
     char[4] unknown1;
     int flags;
     int kv_count;                   // Number of entity's key-value pairs
@@ -156,7 +172,7 @@ typedef struct {
 
 ```c
 typedef struct {
-    p_char[] object_type;       // "CMapGroup" in the case of a group object
+    p_char object_type;         // "CMapGroup" in the case of a group object
     int visgroup_id;            // ID of the VisGroup the object belongs to
     Color color;                // Editor color of the object
     int object_count;           // Number of objects belonging to the group
