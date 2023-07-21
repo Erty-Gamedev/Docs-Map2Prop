@@ -54,8 +54,8 @@ The file entries archived in the WAD3's directory are described using an array o
 
 The WAD3 format can store up to 256 different entry types, but only three are actually supported in GoldSrc:
 * [qpic (0x42)](#qpic-image): A simple image of any size.
-* miptex (0x43): World texture with dimensions that are multiple-of-16 and 4 mipmaps. This is the typical entry type.
-* font (0x45): Fixed-height font for 256 ascii characters.
+* [miptex (0x43)](#miptex-image): World texture with dimensions that are multiple-of-16 and 4 mipmaps. This is the typical entry type.
+* [font (0x45)](#font): Fixed-height font for 256 ascii characters.
 
 # File Entry
 
