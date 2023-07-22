@@ -82,25 +82,27 @@ The structure is similar to what's used to describe textures in the BSP format.
 ```c
 // Image structure used by each mip level
 typedef struct {
-    char[width][height] data;         // Raw image data. Each byte points to an index in the palette
-} MipImage;
-
-// Color palette
-typedef struct {
-    char[256][3] colors;             // 256 triples of bytes (RGB)
-} Palette;
+    char[width][height] data;           // Raw image data. Each byte points to an index in the palette
+} MipMap;
 
 // Texture structure
 typedef struct {
-    nt_string[16] texture_name;      // Null-terminated texture name
-    u_int width, height;             // Dimensions of the texture (must be divisible by 16)
-    u_int[4] mip_offsets;            // Offset from start of texture file to each mipmap level's image
-    MipImage[4] mip_images;          // One MipImage for each mipmap level
-    short padding;
-    Palette[width][height] palette    // The color palette for the mipmaps
+    nt_string[16] texture_name;         // Null-terminated texture name
+    u_int width, height;                // Dimensions of the texture (must be divisible by 16)
+    u_int[4] mip_offsets;               // Offset from start of texture file to each mipmap level's image
+    MipMap[4] mip_images;               // One MipMap for each mipmap level
+    short colors_used;                  // Number of colors used in the palette (always 256 for GoldSrc)
+    char[colors_used][3] palette        // The color palette for the mipmaps (always 256 * 3 = 768 for GoldSrc)
 } MipTex;
 
 ```
+
+For the MipMap images, the first image (level 0) is the texture image in its original dimensions.<br>
+All following levels have dimensions that are a quarter the size of the previous level. For example, for a 16x16 texture:<br>
+* Level 0 is 16x16 (original)
+* Level 1 is 8x8
+* Level 2 is 4x4
+* Level 3 is 2x2
 
 ## Font
 
