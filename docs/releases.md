@@ -7,7 +7,19 @@ nav_order: 2
 # Releases
 
 <br>
-[Latest (v0.8.2 Nompy)](#goldsrc-map2prop-v082-nompy-beta){: .btn .btn-green }
+[Latest (v0.8.3)](#goldsrc-map2prop-v083-beta){: .btn .btn-green }
+
+---
+
+## GoldSrc Map2Prop v0.8.3 <span class="label label-blue">Beta</span>
+
+### Changelog:
+
+* Fix for issue where junk bytes after texture name were attempted decoded as ASCII
+* ValueErrors should now halt the program and show the error message instead of instantly exiting
+
+### Windows:<br>
+[Download Map2Prop0.8.3.7z](releases/Map2Prop0.8.3.7z){: .btn .btn-purple }
 
 ---
 
