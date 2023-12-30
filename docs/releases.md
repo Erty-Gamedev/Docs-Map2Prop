@@ -7,7 +7,18 @@ nav_order: 2
 # Releases
 
 <br>
-[Latest (v0.8.3)](#goldsrc-map2prop-v083-beta){: .btn .btn-green }
+[Latest (v0.8.4)](#goldsrc-map2prop-v084-beta){: .btn .btn-green }
+
+---
+
+## GoldSrc Map2Prop v0.8.4 <span class="label label-blue">Beta</span>
+
+### Changelog:
+
+* Added support for JMF version 122 (J.A.C.K December 2023 update)
+
+### Windows:<br>
+[Download Map2Prop0.8.4.7z](releases/Map2Prop0.8.4.7z){: .btn .btn-purple }
 
 ---
 
