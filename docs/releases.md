@@ -7,7 +7,18 @@ nav_order: 2
 # Releases
 
 <br>
-[Latest (v0.8.5)](#goldsrc-map2prop-v085-mapreader-beta){: .btn .btn-green }
+[Latest (v0.8.6)](#goldsrc-map2prop-v086-beta){: .btn .btn-green }
+
+---
+
+## GoldSrc Map2Prop v0.8.6 <span class="label label-blue">Beta</span>
+
+### Changelog:
+
+* Fixed bug causing failure to extract textures when converting from MAP
+
+### Windows:<br>
+[Download Map2Prop0.8.6.7z](releases/Map2Prop0.8.6.7z){: .btn .btn-purple }
 
 ---
 
