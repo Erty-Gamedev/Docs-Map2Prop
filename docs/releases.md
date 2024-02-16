@@ -7,7 +7,7 @@ nav_order: 2
 # Releases
 
 <br>
-[Latest (v0.8.5)](#goldsrc-map2prop-v085-beta){: .btn .btn-green }
+[Latest (v0.8.5)](#goldsrc-map2prop-v085-mapreader-beta){: .btn .btn-green }
 
 ---
 
