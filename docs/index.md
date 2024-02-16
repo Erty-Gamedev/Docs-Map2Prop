@@ -10,7 +10,7 @@ nav_order: 1
 ## Introduction
 {: .no_toc }
 
-GoldSrc Map2Prop is a tool for converting .rmf and .jmf files, as well as .obj files exported from the Steam version of J.A.C.K, to goldsrc .smd file that can then be compiled into a goldsrc format studio model without the hastle of using an 3D editor.
+GoldSrc Map2Prop is a tool for converting .map, .rmf and .jmf files, as well as .obj files exported from J.A.C.K, to GoldSrc .smd file that can then be compiled into a GoldSrc format studio model without the hassle of using an 3D editor.
 <br><br>
 <details open markdown="block">
   <summary>
@@ -32,7 +32,7 @@ No installation required, simply get the latest executable from [Releases](relea
 
 ## How To Use
 
-For most basic use you just need to ensure all required textures are in the same folder as the project file (the .rmf/.jmf/.obj file), or make use of automatic .wad extraction (explained further down). Then simply drag your project file onto the executable.
+For most basic use you just need to ensure all required textures are in the same folder as the project file (the .map/.rmf/.jmf/.obj file), or make use of automatic .wad extraction (explained further down). Then simply drag your project file onto the executable.
 
 You may also use the CLI interface. Run `Map2Prop.exe --help` to list all available options.
 
@@ -96,7 +96,7 @@ Currently planning on using an option to split up an input file into several mod
 
 ## Special Thanks
 
-Thanks to Captain P for showing me the .rmf/.jmf parsing code from MESS!
+Thanks to Captain P for all the help and advice, as well as showing me the .rmf/.jmf parsing code from MESS! Thanks to Penguinboy for the tips and being very helpful with any questions I've had.
 
 ### Alpha Testers
 Many thanks goes out to the kind people who helped me test this program and provide useful feedback and suggestions during its alpha stage:

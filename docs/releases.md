@@ -7,7 +7,19 @@ nav_order: 2
 # Releases
 
 <br>
-[Latest (v0.8.4)](#goldsrc-map2prop-v084-beta){: .btn .btn-green }
+[Latest (v0.8.5)](#goldsrc-map2prop-v085-beta){: .btn .btn-green }
+
+---
+
+## GoldSrc Map2Prop v0.8.5 MapReader <span class="label label-blue">Beta</span>
+
+### Changelog:
+
+* Added support for converting MAP files
+* Fixed issue of reading JMF files with Quake III/Volatile curves (simply ignores these)
+
+### Windows:<br>
+[Download Map2Prop0.8.5.7z](releases/Map2Prop0.8.5.7z){: .btn .btn-purple }
 
 ---
 
