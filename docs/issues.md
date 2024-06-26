@@ -10,6 +10,7 @@ In Progress
 {: .label .label-yellow }
 
 * Slight discrepancy in UV mapping. Possibly rounding/floating-point error related (under investigation).
+  * UPDATE: This seems to be limited to JMF files and OBJ files exported from JACK.
 
 
 Reported
