@@ -7,7 +7,27 @@ nav_order: 2
 # Releases
 
 <br>
-[Latest (v0.8.6)](#goldsrc-map2prop-v086-beta){: .btn .btn-green }
+[Latest (v0.9.0)](#goldsrc-map2prop-v090-toolfaced-beta){: .btn .btn-green }
+
+---
+
+## GoldSrc Map2Prop v0.9.0 Toolfaced <span class="label label-blue">Beta</span>
+
+### Changelog:
+
+* Implemented handling of various tool textures
+  * `BOUNDINGBOX` can be used to manually set the `$bbox` QC command
+  * `BEVEL` can set volumes within which all vertices are fully smooth-shaded
+  * `CLIP` can be used to manually set the `$cbox` QC command
+  * `CLIPBEVEL` can set volumes within which all vertices are fully flat-shaded
+  * Any brushes with a `CONTENTWATER` face will duplicate and invert all faces
+  * An `ORIGIN` brush can be used to set a model's origin
+* Added a feature to read `func_map2prop` solid entities along with a FGD defining this entity
+  * `func_map2prop` can define objects that will compile as separate model files
+  * The entity can also configure settings such as smoothing thresholds, rotation, scaling and gamma per object
+
+### Windows:<br>
+[Download Map2Prop0.9.0.7z](releases/Map2Prop0.9.0.7z){: .btn .btn-blue }
 
 ---
 
