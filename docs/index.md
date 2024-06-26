@@ -30,7 +30,7 @@ Linux support is planned for a future release.
 
 No installation required, simply get the latest executable from [Releases](releases) and place it in your folder of choice.
 
-## How To Use
+## How to use
 
 For most basic use you just need to ensure all required textures are in the same folder as the project file (the .map/.rmf/.jmf/.obj file), or make use of automatic .wad extraction (explained further down). Then simply drag your project file onto the executable.
 
@@ -40,7 +40,7 @@ The application will produce a .smd file as well as generate a .qc file already 
 
 ### Note: Model origin
 
-The model will use the project file's origin as its own origin. Typically it's preferred to have the origin at the center bottom of the model to make it more convenient to place the model in-editor. This can also be adjusted with the `--offset` command line option.
+The model will use the project file's origin as its own origin, unless an `ORIGIN` brush is placed within the map. Typically it's preferred to have the origin at the center bottom of the model to make it more convenient to place the model in-editor. This can also be adjusted with the `--offset` command line option.
 
 ### Automatic .wad extraction
 
@@ -48,7 +48,7 @@ Map2Prop is able to read and extract textures from .wad packages found in a wad 
 
 ### Smoothing
 
-Smooth shading and the angle threshold for smoothing can be set in config.ini and/or command line, but may also be set by suffixing the file name with `_smooth{x}` where `{x}` is the optional parameter for angle threshold. Leaving out the threshold parameter or setting it to zero will smooth all edges of the model.
+Smooth shading and the angle threshold for smoothing can be set in config.ini and/or command line, but may also be set by suffixing the file name with `_smooth{x}` where `{x}` is the optional parameter for angle threshold, or `BEVEL` and `CLIPBEVEL` brushes can be used to define volumes of always-smooth and always-flat respectively. Leaving out the threshold parameter or setting it to zero will smooth all edges of the model.
 
 Example:<br>`mymodel_smooth60.rmf` will have smooth shading applied to all edges less than 60° apart.
 
@@ -67,7 +67,7 @@ If the path to a [Sven Co-op studiomdl.exe](http://www.the303.org/backups/sven_s
 
 Either copy your object to a new, empty file or select the object in J.A.C.K and go to *File* -> *Export to OBJ...*
 
-## Reporting Problems/Bugs
+## Reporting problems/bugs
 
 Please notify Erty ([erty.gamedev@gmail.com](mailto:erty.gamedev@gmail.com)) along with the project file (either .rmf/.jmf, or .obj and its associated .mtl file) that was used as well as the logs/ folder produced by the executable.
 
@@ -92,13 +92,13 @@ The reason for requiring the Sven Co-op studiomdl.exe for compiling these models
 
 ## Future
 
-Currently planning on using an option to split up an input file into several models based on, for example, VISGroup or tied entity. Leaning towards the latter as the .jmf format's ability to nest VISGroup might make it complicated.
+See the [Future](future) page for planned features and changes.
 
-## Special Thanks
+## Special thanks
 
 Thanks to Captain P for all the help and advice, as well as showing me the .rmf/.jmf parsing code from MESS! Thanks to Penguinboy for the tips and being very helpful with any questions I've had.
 
-### Alpha Testers
+### Alpha testers
 Many thanks goes out to the kind people who helped me test this program and provide useful feedback and suggestions during its alpha stage:
 * SV BOY
 * TheMadCarrot
