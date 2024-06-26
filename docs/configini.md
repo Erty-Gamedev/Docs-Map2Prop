@@ -25,6 +25,7 @@ game config = halflife
 wad cache = 10
 studiomdl = %(steam directory)s\steamapps\common\Sven Co-op SDK\modelling\studiomdl.exe
 autocompile = yes
+autoexit = no
 wad list = 
 ;Example wad list:
 ;wad list = %(steam directory)s\steamapps\common\Half-Life\valve\halflife.wad,
