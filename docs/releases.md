@@ -7,7 +7,21 @@ nav_order: 2
 # Releases
 
 <br>
-[Latest (v0.9.0)](#goldsrc-map2prop-v090-toolfaced-beta){: .btn .btn-green }
+[Latest (v0.9.1-beta)](#goldsrc-map2prop-v091-unchromed-beta){: .btn .btn-green }
+
+---
+
+## GoldSrc Map2Prop v0.9.1 Unchromed <span class="label label-blue">Beta</span>
+
+### Changelog:
+
+* Fixed issues related to floating-point precision
+* Option to disable chrome render mode for textures with `CHROME` in the name (renames these textures prior to compilation)
+  * Can either be set per-entity using the `chrome = 1` keyvalue,
+  * or enabled globally using the `--renamechrome` CLI argument or setting `rename chrome = yes` in config.ini
+
+### Windows:<br>
+[Download Map2Prop0.9.1.7z](releases/Map2Prop0.9.1.7z){: .btn .btn-blue }
 
 ---
 
@@ -27,7 +41,7 @@ nav_order: 2
   * The entity can also configure settings such as smoothing thresholds, rotation, scaling and gamma per object
 
 ### Windows:<br>
-[Download Map2Prop0.9.0.7z](releases/Map2Prop0.9.0.7z){: .btn .btn-blue }
+[Download Map2Prop0.9.0.7z](releases/Map2Prop0.9.0.7z){: .btn .btn-purple }
 
 ---
 
