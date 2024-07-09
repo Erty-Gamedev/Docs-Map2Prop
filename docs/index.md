@@ -6,6 +6,8 @@ nav_order: 1
 
 # GoldSrc Map2Prop
 {: .no_toc }
+<br />
+![Map2Prop](assets/images/m2plamp.png)
 
 ## Introduction
 {: .no_toc }
