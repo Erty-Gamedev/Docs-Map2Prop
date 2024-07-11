@@ -28,6 +28,9 @@ Add the `map2prop.fgd` to your map editor's game configuration to make use of th
   * *monster_furniture (4)*
   * *monster_generic (5)*
 
+### Flags
+* Disable (1) - If set, this prop will be removed from the converted map
+
 ---
 
 ## func_map2prop
@@ -46,6 +49,7 @@ Add the `map2prop.fgd` to your map editor's game configuration to make use of th
     gamma(string) : "Gamma (default 1.8)" : "1.8"
     smoothing(string) : "Smoothing threshold (0 disables)" : "60.0"
     scale(string) : "Scale" : "1.0"
+    qc_flags(integer) : "Flags" : 0
     parent_model(string) : "Template prop"
     own_model(choices) : "Export as its own model" : 1 =
     [
