@@ -17,8 +17,7 @@ Game configs can be set up with paths to your game and mod installs and the appl
 ## Example config.ini
 
 ```ini
-[AppConfig]
-smoothing = yes
+[default]
 smoothing threshold = 60.0
 rename chrome = no
 output directory = 
@@ -28,7 +27,7 @@ studiomdl = %(steam directory)s\steamapps\common\Sven Co-op SDK\modelling\studio
 autocompile = yes
 timeout = 60.0
 autoexit = no
-wad cache = 10
+wad cache = 15
 wad list = 
 ;Example wad list:
 ;wad list = %(steam directory)s\steamapps\common\Half-Life\valve\halflife.wad,
