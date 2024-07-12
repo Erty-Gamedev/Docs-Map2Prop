@@ -6,19 +6,6 @@ nav_order: 3
 
 # Known Bugs / Issues
 
-In Progress
-{: .label .label-yellow }
+Bugs, issues and suggested features will now be tracked at the repo's [Issues page](https://github.com/Erty-Gamedev/GoldSrc-Map2Prop/issues/).
 
-* Slight discrepancy in UV mapping. Possibly rounding/floating-point error related (under investigation).
-  * UPDATE: This seems to be limited to JMF files and OBJ files exported from JACK.
-
-
-Reported
-{: .label .label-purple }
-
-<p></p>
-
-Fixed
-{: .label .label-green }
-
-*Got anything to report? [Let me know](mailto:erty.gamedev@gmail.com)!*
+Got anything to report or any features you want to suggest? Either create a new issue (if there aren't already any similar issues) or [send me an email](mailto:erty.gamedev@gmail.com).
