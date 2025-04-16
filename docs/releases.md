@@ -6,9 +6,27 @@ nav_order: 2
 
 # Releases
 <br />
-[Latest (v1.0.0)](#goldsrc-map2prop-v100){: .btn .btn-green }
+[Latest (v1.1.0)](#goldsrc-map2prop-v110){: .btn .btn-green }
 
 ---
+
+## GoldSrc Map2Prop v1.1.0
+
+* Added support for OL (Worldcraft/Hammer/SvenCraft prefab library)
+* Support for RMF versions 1.6 and 1.8
+
+### Windows:<br>
+[Download Map2Prop1.1.0.7z](https://github.com/Erty-Gamedev/GoldSrc-Map2Prop/releases/download/v1.1.0/Map2Prop1.1.0.7z){: .btn .btn-blue}
+
+---
+
+## GoldSrc Map2Prop v1.0.1
+
+Minor patch
+* Try to handle WAD files with missing drive letter from MAP wad list key (try first using the steam directory's drive letter and then the MAP file's drive letter)
+
+### Windows:<br>
+[Download Map2Prop1.0.1.7z](https://github.com/Erty-Gamedev/GoldSrc-Map2Prop/releases/download/v1.0.1/Map2Prop1.0.1.7z){: .btn .btn-purple}
 
 ## GoldSrc Map2Prop v1.0.0
 
@@ -28,6 +46,4 @@ Map2Prop Released!
 * Targetnames of func_map2prop entities are carried over to converted entities
 
 ### Windows:<br>
-[Download Map2Prop1.0.0.7z](releases/Map2Prop1.0.0.7z){: .btn .btn-blue }
-
----
+[Download Map2Prop1.0.0.7z](releases/Map2Prop1.0.0.7z){: .btn .btn-purple }
