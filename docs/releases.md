@@ -6,7 +6,17 @@ nav_order: 2
 
 # Releases
 <br />
-[Latest (v1.1.0)](#goldsrc-map2prop-v110){: .btn .btn-green }
+[Latest (v1.1.0)](#goldsrc-map2prop-v121){: .btn .btn-green }
+
+---
+
+## GoldSrc Map2Prop v1.2.1
+
+* Implement new triangulation method
+* Various changes and improvements
+
+### Windows:<br>
+[Download Map2Prop1.2.1.7z](https://github.com/Erty-Gamedev/GoldSrc-Map2Prop/releases/download/v1.2.1/Map2Prop1.2.1.7z){: .btn .btn-blue}
 
 ---
 
@@ -16,7 +26,7 @@ nav_order: 2
 * Support for RMF versions 1.6 and 1.8
 
 ### Windows:<br>
-[Download Map2Prop1.1.0.7z](https://github.com/Erty-Gamedev/GoldSrc-Map2Prop/releases/download/v1.1.0/Map2Prop1.1.0.7z){: .btn .btn-blue}
+[Download Map2Prop1.1.0.7z](https://github.com/Erty-Gamedev/GoldSrc-Map2Prop/releases/download/v1.1.0/Map2Prop1.1.0.7z){: .btn .btn-purple}
 
 ---
 
