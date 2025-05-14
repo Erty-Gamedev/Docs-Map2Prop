@@ -6,7 +6,16 @@ nav_order: 2
 
 # Releases
 <br />
-[Latest (v1.1.0)](#goldsrc-map2prop-v121){: .btn .btn-green }
+[Latest (v1.2.5)](#goldsrc-map2prop-v125){: .btn .btn-green }
+
+---
+
+## GoldSrc Map2Prop v1.2.5
+
+* Fix problem that would result in corrupted MAP files when using --mapcompile with --forcermf/jmf
+
+### Windows:<br>
+[Download Map2Prop1.2.5.7z](https://github.com/Erty-Gamedev/GoldSrc-Map2Prop/releases/download/v1.2.5/Map2Prop1.2.5.7z){: .btn .btn-blue}
 
 ---
 
@@ -16,7 +25,7 @@ nav_order: 2
 * Various changes and improvements
 
 ### Windows:<br>
-[Download Map2Prop1.2.1.7z](https://github.com/Erty-Gamedev/GoldSrc-Map2Prop/releases/download/v1.2.1/Map2Prop1.2.1.7z){: .btn .btn-blue}
+[Download Map2Prop1.2.1.7z](https://github.com/Erty-Gamedev/GoldSrc-Map2Prop/releases/download/v1.2.1/Map2Prop1.2.1.7z){: .btn .btn-purple}
 
 ---
 
