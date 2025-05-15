@@ -6,7 +6,19 @@ nav_order: 2
 
 # Releases
 <br />
-[Latest (v1.2.5)](#goldsrc-map2prop-v125){: .btn .btn-green }
+[Latest (v1.2.6)](#goldsrc-map2prop-v126){: .btn .btn-green }
+
+---
+
+## GoldSrc Map2Prop v1.2.6
+
+* Fixed faces not being rotated for RMF versions < 2.2
+* Objects without an ORIGIN brush are now offset so the bottom-center of its AABB is at origin (unless `use_world_origin` is set to 1 in func_map2prop objects)
+* Added `use_world_origin` keyvalue to func_map2prop (see above)
+* Optimised reading prefab libraries
+
+### Windows:<br>
+[Download Map2Prop1.2.6.7z](https://github.com/Erty-Gamedev/GoldSrc-Map2Prop/releases/download/v1.2.6/Map2Prop1.2.6.7z){: .btn .btn-blue}
 
 ---
 
@@ -15,7 +27,7 @@ nav_order: 2
 * Fix problem that would result in corrupted MAP files when using --mapcompile with --forcermf/jmf
 
 ### Windows:<br>
-[Download Map2Prop1.2.5.7z](https://github.com/Erty-Gamedev/GoldSrc-Map2Prop/releases/download/v1.2.5/Map2Prop1.2.5.7z){: .btn .btn-blue}
+[Download Map2Prop1.2.5.7z](https://github.com/Erty-Gamedev/GoldSrc-Map2Prop/releases/download/v1.2.5/Map2Prop1.2.5.7z){: .btn .btn-purple}
 
 ---
 
